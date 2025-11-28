@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ГО "Простір Перемоги"</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0057b7;
+            --secondary: #ffd700;
+            --text: #333;
+            --bg: #f4f4f4;
+            --card-bg: #fff;
+        }
+        body.dark {
+            --bg: #121212;
+            --text: #f4f4f4;
+            --card-bg: #1e1e1e;
+        }
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--text);
+            transition: background 0.3s, color 0.3s;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), #003f87);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        header .logo {
+            width: 80px;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        nav a {
+            color: var(--secondary);
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #fff;
+        }
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--secondary);
+            color: var(--primary);
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 15px;
+        }
+        article, section {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: background 0.3s;
+        }
+        h2 {
+            color: var(--primary);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: var(--secondary);
+            color: var(--primary);
+            font-weight: bold;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #fff;
+        }
+        .contact-form button {
+            background-color: var(--primary);
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #003f87;
+        }
+        .donate {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .donate a {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: var(--primary);
+            font-weight: bold;
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .donate a:hover {
+            transform: scale(1.05);
+            background-color: #ffc107;
+        }
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+            main {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Логотип" class="logo">
+        <h1>Громадська організація "Простір Перемоги"</h1>
+        <nav>
+            <a href="#home">Головна</a>
+            <a href="#about">Про нас</a>
+            <a href="#contacts">Контакти</a>
+        </nav>
+        <button class="theme-toggle" onclick="toggleTheme()">Тема</button>
+    </header>
+
+    <main id="home">
+        <article>
+            <h2>Історія: як ми допомагаємо ветеранам</h2>
+            <p>Ми віримо, що підтримка ветеранів — це не лише слова, а конкретні дії. Наша місія полягає в тому, щоб кожен захисник відчував турботу та мав можливість повернутися до мирного життя з гідністю.</p>
+            <ul>
+                <li>Психологічна підтримка — консультації та групи взаємодопомоги.</li>
+                <li>Навчання та робота — курси перекваліфікації, допомога у працевлаштуванні.</li>
+                <li>Соціальні проєкти — організація зустрічей, культурних заходів та спільнот.</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>Об’єднання ветеранського бізнесу</h2>
+            <p>Ми створюємо спільноту, де ветеранські підприємці підтримують одне одного, діляться досвідом та розвивають партнерства. Разом ми будуємо сильну економіку, засновану на цінностях служіння та взаємопідтримки.</p>
+            <img src="images/photo1.jpg" alt="Ветеранський бізнес">
+        </article>
+
+        <section id="about">
+            <h2>Про нас</h2>
+            <p>ГО «Простір Перемоги» — це команда однодумців, яка об’єдналася для підтримки ветеранів та їхніх родин. Ми працюємо над створенням можливостей для розвитку, навчання та соціальної інтеграції.</p>
+            <p><strong>Керівник організації:</strong> Криволапчук Володимир Олегович</p>
+            <div class="about-images">
+                <img src="images/team.jpg" alt="Наша команда">
+                <img src="images/leader.jpg" alt="Керівник організації">
+            </div>
+        </section>
+
+        <section id="contacts">
+            <h2>Контакти</h2>
+            <p><strong>Телефон:</strong> 050 811 02 86</p>
+            <p><strong>Email:</strong> dopomogaveteranam@ukr.net</p>
+            <p><strong>Соціальні мережі:</strong></p>
+            <ul>
+                <li><a href="https://www.instagram.com/space_of_victory/" target="_blank">Instagram</a></li>
+                <li><a href="https://www.facebook.com/groups/1170449127680246" target="_blank">Facebook</a></li>
+                <li><a href="https://t.me/prostirperemohy" target="_blank">Telegram</a></li>
+            </ul>
+
+            <form class="contact-form" action="#" method="post">
+                <label for="name">Ваше ім’я:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Повідомлення:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Надіслати</button>
+            </form>
+
+            <div class="donate">
+                <a href="https://inst4.paylink.com.ua/payment-button/checkout/?profile=fc442c6e68" target="_blank">Підтримати</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 ГО Простір Перемоги. Всі права захищені.
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark');
+        }
+    </script>
+</body>
+</html>
