@@ -11,7 +11,7 @@
 ---
 
 ## 🔗 Живий сайт
-[![Відкрити сайт](https://img.shields.io/badge/Відкрити%20сайт-0057b7?style=for-the-badge&logo=github&logoColor=white)](https://ваш-логін.github.io/Dopomoga)
+[Відкрити сайт](https://ВАШ-ЛОГІН.github.io/Dopomoga)
 
 ---
 
@@ -34,4 +34,4 @@
 ## 🚀 Як запустити локально:
 1. Склонуйте репозиторій:
    ```bash
-   git clone https://github.com/ваш-логін/Dopomoga.git
+   git clone https://github.com/ВАШ-ЛОГІН/Dopomoga.git
